@@ -1,0 +1,54 @@
+02-12-2018 17:43:26 - [Sysinfo]: Start
+02-12-2018 17:43:26 - [Sysinfo]: Operating System   : 17134
+02-12-2018 17:43:26 - [Sysinfo]: Service Pack       : 
+02-12-2018 17:43:26 - [Sysinfo]: System Architecture: X64
+02-12-2018 17:43:26 - [Sysinfo]: Host               : ASUS
+02-12-2018 17:43:26 - [Main]: Start
+02-12-2018 17:43:26 - [Main]: Sleeping for some time
+02-12-2018 17:44:26 - [Main]: Resuming
+02-12-2018 17:44:26 - [Task_schedule_check]: Reschedule check, False
+02-12-2018 17:44:28 - [Task_schedule_check] task query $Message = 
+02-12-2018 17:44:28 - [task_schedule_create]: Creating task OutlookAuto
+02-12-2018 17:44:30 - [Outlook_Launch_exit]: Outlook 32 D:\App Install\MsOffice\Office14\
+02-12-2018 17:44:30 - [Outlook_Launch_exit]: running outlook
+02-12-2018 17:44:30 - [Outlook_Launch_exit]: outlook pid 13944
+02-12-2018 17:45:30 - [Main]: Source isArray0
+02-12-2018 17:45:30 - [Main]: Not an array
+02-12-2018 17:45:30 - [Main]: Now Date
+02-12-2018 17:45:30 - [Main]: Now Date rectified02-12-2018
+02-12-2018 17:45:30 - [Main]: Copying FolderC:\UsersD:\Outlook_Backup\\02-12-2018\
+02-12-2018 17:45:30 - [folder_copy] FileCopy from : C:\Users\* to D:\Outlook_Backup\\02-12-2018\\*And Error is 0
+02-12-2018 17:50:33 - [Sysinfo]: Start
+02-12-2018 17:50:33 - [Sysinfo]: Operating System   : 17134
+02-12-2018 17:50:33 - [Sysinfo]: Service Pack       : 
+02-12-2018 17:50:33 - [Sysinfo]: System Architecture: X64
+02-12-2018 17:50:33 - [Sysinfo]: Host               : ASUS
+02-12-2018 17:50:33 - [Main]: Start
+02-12-2018 17:50:33 - [Main]: Sleeping for some time
+02-12-2018 17:51:33 - [Main]: Resuming
+02-12-2018 17:51:33 - [Task_schedule_check]: Reschedule check, False
+02-12-2018 17:51:35 - [Task_schedule_check] task query $Message = 
+02-12-2018 17:51:35 - [task_schedule_create]: Creating task OutlookAuto
+02-12-2018 17:51:38 - [Outlook_Launch_exit]: Outlook 32 D:\App Install\MsOffice\Office14\
+02-12-2018 17:51:38 - [Outlook_Launch_exit]: running outlook
+02-12-2018 17:51:38 - [Outlook_Launch_exit]: outlook pid 13632
+02-12-2018 17:52:31 - [Sysinfo]: Start
+02-12-2018 17:52:31 - [Sysinfo]: Operating System   : 17134
+02-12-2018 17:52:31 - [Sysinfo]: Service Pack       : 
+02-12-2018 17:52:31 - [Sysinfo]: System Architecture: X64
+02-12-2018 17:52:31 - [Sysinfo]: Host               : ASUS
+02-12-2018 17:52:31 - [Main]: Start
+02-12-2018 17:52:31 - [Main]: Sleeping for some time
+02-12-2018 17:53:31 - [Main]: Resuming
+02-12-2018 17:53:31 - [Task_schedule_check]: Reschedule check, False
+02-12-2018 17:53:32 - [Task_schedule_check] task query $Message = 
+02-12-2018 17:53:32 - [task_schedule_create]: Creating task OutlookAuto
+02-12-2018 17:53:33 - [Outlook_Launch_exit]: Outlook 32 D:\App Install\MsOffice\Office14\
+02-12-2018 17:53:33 - [Outlook_Launch_exit]: running outlook
+02-12-2018 17:53:34 - [Outlook_Launch_exit]: outlook pid 10600
+02-12-2018 17:54:34 - [Main]: Source isArray0
+02-12-2018 17:54:34 - [Main]: Not an array
+02-12-2018 17:54:34 - [Main]: Now Date
+02-12-2018 17:54:34 - [Main]: Now Date rectified02-12-2018
+02-12-2018 17:54:34 - [Main]: Copying FolderC:\UsersD:\Outlook_Backup\\02-12-2018\
+02-12-2018 17:54:34 - [folder_copy] FileCopy from : C:\Users\* to D:\Outlook_Backup\\02-12-2018\\*And Error is 0

@@ -1,0 +1,42 @@
+02-12-2018 17:39:48 - [Sysinfo]: Start
+02-12-2018 17:39:48 - [Sysinfo]: Operating System   : 17134
+02-12-2018 17:39:48 - [Sysinfo]: Service Pack       : 
+02-12-2018 17:39:48 - [Sysinfo]: System Architecture: X64
+02-12-2018 17:39:48 - [Sysinfo]: Host               : ASUS
+02-12-2018 17:39:48 - [Main]: Start
+02-12-2018 17:39:48 - [Main]: Sleeping for some time
+02-12-2018 17:40:48 - [Main]: Resuming
+02-12-2018 17:40:48 - [Task_schedule_check]: Reschedule check, False
+02-12-2018 17:40:49 - [Task_schedule_check] task query $Message = 
+02-12-2018 17:40:49 - [task_schedule_create]: Creating task OutlookAuto
+02-12-2018 17:40:50 - [Outlook_Launch_exit]: Outlook 32 D:\App Install\MsOffice\Office14\
+02-12-2018 17:40:50 - [Outlook_Launch_exit]: running outlook
+02-12-2018 17:40:50 - [Outlook_Launch_exit]: outlook pid 12724
+02-12-2018 18:21:18 - [Sysinfo]: Start
+02-12-2018 18:21:18 - [Sysinfo]: Operating System   : 17134
+02-12-2018 18:21:18 - [Sysinfo]: Service Pack       : 
+02-12-2018 18:21:18 - [Sysinfo]: System Architecture: X64
+02-12-2018 18:21:18 - [Sysinfo]: Host               : ASUS
+02-12-2018 18:21:18 - [Main]: Start
+02-12-2018 18:21:18 - [Main]: Sleeping for some time
+02-12-2018 18:22:18 - [Main]: Resuming
+02-12-2018 18:22:18 - [Task_schedule_check]: Reschedule check, False
+02-12-2018 18:22:20 - [Task_schedule_check] task query $Message = 
+02-12-2018 18:22:20 - [task_schedule_create]: Creating task OutlookAuto
+02-12-2018 18:22:21 - [Outlook_Launch_exit]: Outlook 32 D:\App Install\MsOffice\Office14\
+02-12-2018 18:22:21 - [Outlook_Launch_exit]: running outlook
+02-12-2018 18:22:22 - [Outlook_Launch_exit]: outlook pid 4072
+02-12-2018 18:41:47 - [Sysinfo]: Start
+02-12-2018 18:41:47 - [Sysinfo]: Operating System   : 17134
+02-12-2018 18:41:47 - [Sysinfo]: Service Pack       : 
+02-12-2018 18:41:47 - [Sysinfo]: System Architecture: X64
+02-12-2018 18:41:47 - [Sysinfo]: Host               : ASUS
+02-12-2018 18:41:47 - [Main]: Start
+02-12-2018 18:41:47 - [Main]: Sleeping for some time
+02-12-2018 18:48:28 - [Sysinfo]: Start
+02-12-2018 18:48:28 - [Sysinfo]: Operating System   : 17134
+02-12-2018 18:48:28 - [Sysinfo]: Service Pack       : 
+02-12-2018 18:48:28 - [Sysinfo]: System Architecture: X64
+02-12-2018 18:48:28 - [Sysinfo]: Host               : ASUS
+02-12-2018 18:48:28 - [Main]: Start
+02-12-2018 18:48:28 - [Main]: Sleeping for some time
