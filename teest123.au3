@@ -1,7 +1,8 @@
 #include <GUIConstantsEx.au3>
 #include <WindowsConstants.au3>
-#include<Array.au3>
+#include <Array.au3>
 #include <Date.au3>
+#include <File.au3>
 
 Global $cfgFile = @ScriptDir & "\Config.ini"
 Global $DestFolder = "D:\Outlook_Backup"
@@ -20,6 +21,9 @@ EndFunc
 
 Func Def_Object()
    Global $objOutlook = ObjCreate("Outlook.Application")
+   Sleep(5000)
+   $objOutlook.Quit
+   MsgBox(0,0,"Quit")
    Global $objNamespace = $objOutlook.GetNamespace("MAPI")
    Global $strStoreName = IniRead($cfgFile,"Section","MailID","")
 ;~    MsgBox(0,0,$strStoreName)
@@ -53,13 +57,19 @@ Global $IncludeList = StringSplit(IniRead('Config.ini', "Section", "Outlook_Fold
 ;Function to add subfolders
 ;================================================
 
-for $i = 1 to $IncludeList[0]
-	Global $objfolder = $objRoot.folders($IncludeList[$i])
+Dim $objSubfolders
+For $objSubfolders in $objfolder.folders
+	MsgBox(0,0,$objSubfolders.Name)
+	$SubDestFolder = $DestFolder & '\' & $objSubfolders.Name
+	Backup_mails($SubDestFolder, $objSubfolders)
 
-	for $subfolder in $objfolder.folders
-		_ArrayAdd($IncludeList,$objfolder.Name & '\' & $subFolder.Name)
-		$IncludeList[0] +=1
-	Next
+	If $objSubfolders.folders.count > 1 Then
+		Dim $fold
+		For $fold in $objSubfolders.folders
+			$DestFolder = $DestFolder & '\' & $objSubfolders & '\' & $fold.Name
+			Backup_mails($DestFolder, $fold)
+		Next
+	EndIf
 Next
 
 
@@ -102,13 +112,14 @@ Func Backup_mails($DestFolder, $objfolder, $delete_mails = 0)
 		$filename = CleanString($filename)
 
 	    SendAndLog("[Backup_mails]: File Name 2 - " & $filename)
-	    $final_folder = $DestFolder & "\" & $objWorkingFolder & "\"
-	    $final_folder = StringReplace($final_folder, "\\", "\")
+	    $fullpath = $DestFolder & "\"; & $objWorkingFolder & "\"
+	    $DestFolder = StringReplace($fullpath, "\\", "\")
 
-	    If Not FileExists($DestFolder & "\" & $objWorkingFolder) Then DirCreate($DestFolder & "\" & $objWorkingFolder)
+	    ;If Not FileExists($DestFolder & "\" & $objWorkingFolder) Then DirCreate($DestFolder & "\" & $objWorkingFolder)
+		If Not FileExists($DestFolder) Then DirCreate($DestFolder)
 ;~ 	   MsgBox(0,'Final Folder', $final_folder)
-	    SendAndLog("[Backup_mails]: Mail will be saved as " & $final_folder & $filename & ".msg")
-	    $mail.SaveAs($final_folder & $filename & ".msg", 3)
+	    SendAndLog("[Backup_mails]: Mail will be saved as " & $DestFolder & $filename & ".msg")
+	    $mail.SaveAs($DestFolder & $filename & ".msg", 3)
 
 
 	    If $delete_mails Then
@@ -122,18 +133,23 @@ EndFunc
 
 
 
-_ArrayDisplay($IncludeList)
+;_ArrayDisplay($IncludeList)
+
+
 
 for $i = 1 to $IncludeList[0]
 	Global $objfolder = $objRoot.folders($IncludeList[$i])
+
 	;MsgBox(0,0,$objfolder.Name)
 	Global $delete_mails = 0
 	$x = _NowDate()
     SendAndLog("[Main]: Now Date" & _NowDate)
     $y = StringReplace($x, '/', '-')
     SendAndLog("[Main]: Now Date rectified" & $y)
-    $DestFolder = $dst & "\" & $y & "\"
+    Global $DestFolder = $dst & "\" & $y & "\" & $objfolder.Name
 	Backup_mails($DestFolder, $objfolder, $delete_mails)
+
+
 Next
 
-$objOutlook.Destroy
+

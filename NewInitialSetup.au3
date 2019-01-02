@@ -4,6 +4,54 @@
 #include <GUIConstantsEx.au3>
 #include <StaticConstants.au3>
 #include <WindowsConstants.au3>
+#include <Constants.au3>
+#include <Date.au3>
+
+Global $spath = @ScriptDir
+Global $DOS, $Message, $dst, $bkpTime,  $logEnable = ""
+$sKeyPath = "HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles\Outlook"
+$cfgFile = @ScriptDir & "\Config.ini"
+$log = False
+Global $logEnable = "False"
+Global $objArray[1][2] = [[0,0]]
+FileChangeDir($spath)
+
+Global $installdir = "C:\OutlookAuto\"
+$Desktop = @DesktopDir
+
+If FileExists(@scriptdir & "\Config.ini") Then
+	  Global $logEnable =  IniRead($cfgFile, "Section", "LogEnable", "False")
+EndIf
+
+$dread = IniRead($cfgFile,'Section','DestinationFolder','D:\Outlook_Backup')
+$timeread = IniRead($cfgFile,'Section','BackupTime','20:00:00')
+
+Func SendAndLog($Data, $FileName = -1, $TimeStamp = True, $Log = $logEnable)
+   If StringCompare($Log, 'True') ==0 Then
+
+	   If $FileName == -1 Then $FileName = @ScriptDir & '\Log.txt'
+	   ;Send($Data)
+	   $hFile = FileOpen($FileName, 1)
+	   If $hFile <> -1 Then
+		   If $TimeStamp = True Then $Data = _Now() & ' - ' & $Data
+		   FileWriteLine($hFile, $Data)
+		   FileClose($hFile)
+		EndIf
+   EndIf
+EndFunc
+
+
+Func task_schedule_delete()
+   SendAndLog("[task_schedule_delete]: Deleting task OutlookAuto")
+   $DOS = Run(@ComSpec & ' /c schtasks /delete /tn OutlookAuto /f', "", @SW_HIDE, $STDERR_CHILD + $STDOUT_CHILD)
+   ProcessWaitClose($DOS)
+   SendAndLog("[task_schedule_delete]: reseting config")
+EndFunc
+
+
+
+task_schedule_delete()
+
 #Region ### START Koda GUI section ### Form=
 Global $InitialConfig_1 = GUICreate("Initial Config", 634, 480, -1, -1)
 Global $Company = GUICtrlCreatePic("C:\FreeLance\img\soft.bmp", 0, 56, 76, 422)
@@ -56,7 +104,7 @@ Global $Silent = GUICtrlCreateCheckbox("Silent Mode", 136, 384, 97, 17)
 
 
 ;----------------------------------------------------------------------
-; Inputs for Inclue Mail Options
+; Inputs for Include Mail Options
 ;----------------------------------------------------------------------
 
 Global $Group1 = GUICtrlCreateGroup("", 480, 96, 105, 162)
@@ -97,6 +145,14 @@ While 1
 
 		Case $Save
 			$mail_id = GUICtrlRead($Mail_ID)
+
+			While $mail_id == "" Or $mail_id == 0
+				$mail_id = GUICtrlRead($Mail_ID)
+				MsgBox('0','Outlook Auto','Mail Id cannot be empty')
+				ContinueCase
+			WEnd
+
+
 			$dest_path = GUICtrlRead($DestinationFolder)
 			$backupTimer = GUICtrlRead($BackupupTime)
 
@@ -118,6 +174,13 @@ While 1
 				$Silentwrite = IniWrite("Config.ini","Section",'AutoSilent','False')
 			EndIf
 
+
+			$createShortcut = FileCreateShortcut($installdir & "InitialSetup.exe",@DesktopDir & "\OutlookAuto.lnk","","","OutlookAuto",$installdir & "OutlookBackup.ico")
+			FileChangeDir($spath)
+			$Enginestart = Run('Outlook_auto.exe')
+
+
+		Exit
 
 	EndSwitch
 WEnd
