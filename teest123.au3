@@ -22,7 +22,7 @@ EndFunc
 Func Def_Object()
    Global $objOutlook = ObjCreate("Outlook.Application")
    Sleep(5000)
-   $objOutlook.Quit
+   $objOutlook.Quit()
    MsgBox(0,0,"Quit")
    Global $objNamespace = $objOutlook.GetNamespace("MAPI")
    Global $strStoreName = IniRead($cfgFile,"Section","MailID","")

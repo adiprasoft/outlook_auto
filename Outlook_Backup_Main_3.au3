@@ -91,7 +91,7 @@ Func ConfigCreate($cfgFile)
    Else
 	  SendAndLog("[ConfigCreate] Config file does not exists. Creating a new config file")
 	  ;Dim $data[7][2] = [[1, ""], ["DeleteMails", 0], ["DestinationFolder", "D:\Outlook_backup"], ["BackupTime", "19:00:00"], ["LogEnable", "False"],["Outlook_Folder_Include_List", ""],["MailID",""]]
-	  Dim $data[6][2] = [["DeleteMails", 0], ["DestinationFolder", "D:\Outlook_backup"], ["BackupTime", "19:00:00"], ["LogEnable", "False"],["Outlook_Folder_Include_List", ""],["MailID",""]]
+	  Dim $data[6][2] = [["DeleteMails", 0], ["DestinationFolder", "D:\Outlook_backup"], ["BackupTime", "19:00:00"], ["LogEnable", "False"],["Include_List", ""],["MailID",""]]
 	  IniWriteSection($cfgFile, "Section", $data)
    EndIf
 EndFunc
@@ -113,7 +113,7 @@ Func ConfigRead()
 	  Global $mail_id = IniRead($cfgFile, "Section", "MailID", "abc.xyz.com")
 	  Global $delete_mails = IniRead($cfgFile, "Section", "DeleteMails", 0)
 	  Global $logEnable = IniRead($cfgFile, "Section", "LogEnable", "False")
-	  Global $IncludeList = StringSplit(IniRead($cfgFile, "Section", "Outlook_Folder_Include_List", ""), ",")
+	  Global $IncludeList = StringSplit(IniRead($cfgFile, "Section", "Include_List", ""), ",")
 	EndIf
    Return True
 EndFunc
@@ -272,9 +272,7 @@ Func Backup_mails($DestFolder, $objfolder, $delete_mails = 0)
 			SendAndLog("[Deleting_Mails]: Mail will be deleted " & $DestFolder & $filename & ".msg")
 			$mail.Delete
 	    EndIf
-
     Next
-
 EndFunc
 
 
@@ -286,7 +284,7 @@ EndFunc
 
 Func Main()
 	Dim $Mail_count
-    TrayTip("Outlook Auto", "Starting in 30 sec", 5)
+    TrayTipMsg("Outlook Auto", "Starting in 30 sec", 5)
     Sleep(1000*25)
     SendAndLog("[Main]:")
     Sysinfo()
@@ -316,15 +314,52 @@ Func Main()
 		$Nested = Add_Subfolders($DestFolder, $objfolder)
 		SendAndLog("[Nested_Folder]: Status for Nested Folder " & $Nested)
 	Next
-	TrayTip("Outlook Auto","Mail Backup Complete", 5)
+	Global $objfolder = Null
+	TrayTipMsg("Outlook Auto","Mail Backup Complete", 5)
+EndFunc
+
+
+;===========================================================================
+; Function for silent Mode (Without Tray Tip)
+;===========================================================================e
+Func TrayTipMsg($title, $message, $timeout)
+	If FileExists(@ScriptDir & "\Config.ini") Then
+		$Silentmode = IniRead("Config.ini","Section","AutoSilent","False")
+		If $Silentmode == "True" Then
+			;do nothing
+		Else
+			TrayTip($title, $message, $timeout)
+		EndIf
+	EndIf
 EndFunc
 
 
 
+
+
+;===========================================================================
+; Function to release Created Objects
+;===========================================================================
+
+Func Release_Object()
+	Global $objOutlook = Null
+	Global $objNamespace = Null
+	Global $strStoreName = Null
+	Global $objStore = Null
+	Global $objRoot = Null
+	Global $objInbox = Null
+	SendAndLog("[Releasing_Objects]: Releasing Created objects")
+EndFunc
+
+
+;===========================================================================
+; While loop for continous running
+;===========================================================================
+
 While 1
 	Main()
 	Sleep(5000)
-	MsgBox(0,"outlook pid",WinGetProcess("outlook"))
-	ProcessClose(WinGetProcess("outlook"))
+	Release_Object()
+	Sleep(5000)
 	Service_Wait()
 WEnd

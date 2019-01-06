@@ -1,3 +1,4 @@
+#RequireAdmin
 #include <ButtonConstants.au3>
 #include <DateTimeConstants.au3>
 #include <EditConstants.au3>
@@ -6,6 +7,8 @@
 #include <WindowsConstants.au3>
 #include <Constants.au3>
 #include <Date.au3>
+#include<Array.au3>
+
 
 Global $spath = @ScriptDir
 Global $DOS, $Message, $dst, $bkpTime,  $logEnable = ""
@@ -49,7 +52,6 @@ Func task_schedule_delete()
 EndFunc
 
 
-
 task_schedule_delete()
 
 #Region ### START Koda GUI section ### Form=
@@ -58,18 +60,18 @@ Global $Company = GUICtrlCreatePic("C:\FreeLance\img\soft.bmp", 0, 56, 76, 422)
 Global $Outlook = GUICtrlCreatePic("C:\FreeLance\img\try.jpg", 0, 0, 628, 60)
 Global $Blank = GUICtrlCreatePic("C:\FreeLance\img\black.bmp", -8, 56, 636, 4)
 Global $Save = GUICtrlCreateButton("Save and Run", 480, 368, 91, 25)
-Global $Cancel = GUICtrlCreateButton("Cancel", 376, 368, 75, 25)
+Global $Cancel = GUICtrlCreateButton("Cancel", 390, 368, 75, 25)
 
 
 ;----------------------------------------------------------------------
 ; Inputs for Mail and destination Folders
 ;----------------------------------------------------------------------
 
-Global $Mail_ID = GUICtrlCreateInput("", 296, 120, 121, 21)
+Global $Mail_ID = GUICtrlCreateInput('', 296, 120, 121, 21)
 Global $Mail_ID_Label = GUICtrlCreateLabel("Outlook Mail ID", 136, 128, 99, 17)
-GUICtrlSendMsg($Mail_ID, $EM_SETCUEBANNER, False, "adiprasoft@gmail.com") ; place holder
+;GUICtrlSendMsg($Mail_ID, $EM_SETCUEBANNER, False, "adiprasoft@gmail.com") ; place holder
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
-Global $DestinationFolder = GUICtrlCreateInput(@ScriptDir, 296, 176, 121, 21)
+Global $DestinationFolder = GUICtrlCreateInput('', 296, 176, 121, 21)
 Global $DestinationLabel = GUICtrlCreateLabel("Destination Folder", 136, 184, 107, 17)
 GUICtrlSetFont(-1, 8, 800, 0, "MS Sans Serif")
 Global $Select_Folder = GUICtrlCreateButton("...", 424, 176, 27, 21)
@@ -119,7 +121,7 @@ GUICtrlSetCursor (-1, 7)
 
 Global $Sent_Items_Include = GUICtrlCreateCheckbox("Sent Items", 496, 160, 73, 17)
 GUICtrlSetCursor (-1, 0)
-Global $Deleted_Items_inclde = GUICtrlCreateCheckbox("Deleted Items", 496, 184, 81, 17)
+Global $Deleted_Items_include = GUICtrlCreateCheckbox("Deleted Items", 496, 184, 81, 17)
 GUICtrlSetCursor (-1, 0)
 Global $Drafts_Include = GUICtrlCreateCheckbox("Drafts", 496, 208, 49, 17)
 GUICtrlSetCursor (-1, 0)
@@ -134,6 +136,7 @@ GUISetState(@SW_SHOW)
 
 While 1
 	$nMsg = GUIGetMsg()
+
 	Switch $nMsg
 		Case $GUI_EVENT_CLOSE
 			Exit
@@ -144,18 +147,12 @@ While 1
 			Exit
 
 		Case $Save
+
+
 			$mail_id = GUICtrlRead($Mail_ID)
-
-			While $mail_id == "" Or $mail_id == 0
-				$mail_id = GUICtrlRead($Mail_ID)
-				MsgBox('0','Outlook Auto','Mail Id cannot be empty')
-				ContinueCase
-			WEnd
-
-
 			$dest_path = GUICtrlRead($DestinationFolder)
-			$backupTimer = GUICtrlRead($BackupupTime)
 
+			$backupTimer = GUICtrlRead($BackupupTime)
 
 			; writing to config file
 			$mail_write = IniWrite("Config.ini","Section","MailID",$mail_id)
@@ -175,19 +172,41 @@ While 1
 			EndIf
 
 
+
+
+			Global $Include_list[1][1] = [['Inbox']]
+
+			If GUICtrlRead($Sent_Items_Include) == $GUI_CHECKED Then
+				ArrayAdd('Sent Items')
+			EndIf
+
+			If GUICtrlRead($Deleted_Items_include) == $GUI_CHECKED Then
+				ArrayAdd('Deleted Items')
+			EndIf
+
+
+			If GUICtrlRead($Drafts_Include) == $GUI_CHECKED Then
+				ArrayAdd('Drafts')
+			EndIf
+
+			If GUICtrlRead($Junk_Email_Include) == $GUI_CHECKED Then
+				ArrayAdd('Junk Email')
+			EndIf
+
+
+			$Outlook_Include_list = IniWrite($cfgFile,"Section","Include_List",_ArrayToString($Include_list,","))
+			;_ArrayDisplay($Include_list)
+
 			$createShortcut = FileCreateShortcut($installdir & "InitialSetup.exe",@DesktopDir & "\OutlookAuto.lnk","","","OutlookAuto",$installdir & "OutlookBackup.ico")
 			FileChangeDir($spath)
-			$Enginestart = Run('Outlook_auto.exe')
-
-
+			;$Enginestart = Run('Outlook_auto.exe')
 		Exit
-
 	EndSwitch
 WEnd
 
-;////////////////////////////////////////////////////////////////////
-;//   FUNCs
-;////////////////////////////////////////////////////////////////////
+;====================================================================
+; FUNCs
+;====================================================================
 
 FUNC _select_folder()
     $sDir = FileSelectFolder("Select Destination Directory", "", 0, @ScriptDir)
@@ -198,7 +217,22 @@ FUNC _select_folder()
         Sleep(500)
         ToolTip("",0,0)
     Elseif $sDir <> "\" Then
-                  GUICtrlSetData($DestinationFolder,$sDir)
+	    GUICtrlSetData($DestinationFolder,$sDir)
     EndIf
-
 EndFunc
+
+
+
+
+Func ArrayAdd($subfolder)
+	;$Include_list[0][0] +=1
+	_ArrayAdd($Include_list, $subfolder)
+EndFunc
+
+
+
+
+
+
+
+
