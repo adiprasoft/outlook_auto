@@ -1,25 +1,269 @@
-05-01-2019 18:32:44 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:32:45 - [task_schedule_delete]: reseting config
-05-01-2019 18:33:43 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:33:44 - [task_schedule_delete]: reseting config
-05-01-2019 18:33:55 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:33:57 - [task_schedule_delete]: reseting config
-05-01-2019 18:34:06 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:34:06 - [task_schedule_delete]: reseting config
-05-01-2019 18:34:42 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:34:43 - [task_schedule_delete]: reseting config
-05-01-2019 18:43:40 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:43:41 - [task_schedule_delete]: reseting config
-05-01-2019 18:43:56 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:43:58 - [task_schedule_delete]: reseting config
-05-01-2019 18:44:56 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 18:44:57 - [task_schedule_delete]: reseting config
-05-01-2019 19:42:30 - [Sysinfo]: Start
-05-01-2019 19:42:30 - [Sysinfo]: Operating System   : 17134
-05-01-2019 19:42:30 - [Sysinfo]: Service Pack       : 
-05-01-2019 19:42:30 - [Sysinfo]: System Architecture: X64
-05-01-2019 19:42:30 - [Sysinfo]: Host               : ASUS
-05-01-2019 19:42:30 - [Main]: Start
-05-01-2019 19:42:30 - [Main]: Sleeping for some time
-05-01-2019 20:12:06 - [task_schedule_delete]: Deleting task OutlookAuto
-05-01-2019 20:12:07 - [task_schedule_delete]: reseting config
+08-01-2019 01:17:47 - [Main]:
+08-01-2019 01:17:47 - [Sysinfo]: Start
+08-01-2019 01:17:47 - [Sysinfo]: Operating System   : 17134
+08-01-2019 01:17:47 - [Sysinfo]: Service Pack       : 
+08-01-2019 01:17:47 - [Sysinfo]: System Architecture: X64
+08-01-2019 01:17:47 - [Sysinfo]: Host               : ASUS
+08-01-2019 01:17:47 - [Config-Read]: Outlook Mail ID prash.roy@live.com
+08-01-2019 01:17:47 - [Config-Read]: Delete Mail Value Set To  0
+08-01-2019 01:17:47 - [Config-Read]: Log Enable Value Set To True
+08-01-2019 01:17:47 - [Config-Read]: Outlook Mail ID prash.roy@live.com
+08-01-2019 01:17:47 - [Config-Read]: Auto Silent Mode False
+08-01-2019 01:17:47 - [Config-Read]: Folders Included 
+08-01-2019 01:17:47 - [Set_startup_run]: Start
+08-01-2019 01:17:47 - [Set_startup_run]: Registry values is - C:\FreeLance\Outlook_backup_com.exe
+08-01-2019 01:17:47 - [Def_Object]: Start
+08-01-2019 01:17:49 - [Def_Object]: Outlook.Application Created
+08-01-2019 01:17:49 - [Def_Object]: NameSpace Created
+08-01-2019 01:17:49 - [Def_Object]: StoreName Created
+08-01-2019 01:17:49 - [Def_Object]: $objRoot = 
+08-01-2019 01:17:49 - [Def_Object]: Obj Inbox Created
+08-01-2019 01:17:49 - [Download_Mails]: Start
+08-01-2019 01:17:49 - [Download_Mails]: Mail count 1 - 41
+08-01-2019 01:18:19 - [Download_Mails]: Mail count 2 - 41
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Start
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - Deleted ItemsMail Count - 27
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - InboxMail Count - 41
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - OutboxMail Count - 0
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - Sent ItemsMail Count - 41
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - FilesMail Count - 0
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - CalendarMail Count - 0
+08-01-2019 01:18:19 - [Get_Mail_folders_count]: Folder Name - TasksMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Junk EmailMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - DraftsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - ContactsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Yammer RootMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - PersonMetadataMail Count - 14
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - NotesMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - MeContactMail Count - 2
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - FlipkartMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - ExternalContactsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Conversation HistoryMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Conversation Action SettingsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - ArchiveMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - JournalMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Sync IssuesMail Count - 1
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Suggested ContactsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - News FeedMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - RSS FeedsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Folder Name - Quick Step SettingsMail Count - 0
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Total Folder Count - 25
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: for $objSubFolder - 
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Count is - 13
+08-01-2019 01:18:20 - [ArrayAdd]: Start
+08-01-2019 01:18:20 - [ArrayAdd]: Added  and 
+08-01-2019 01:18:20 - [ArrayAdd]: Array count - 26
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: for $objSubFolder - 
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: Count is - 13
+08-01-2019 01:18:20 - [ArrayAdd]: Start
+08-01-2019 01:18:20 - [ArrayAdd]: Added  and 
+08-01-2019 01:18:20 - [ArrayAdd]: Array count - 27
+08-01-2019 01:18:20 - [Get_Mail_folders_count]: End
+08-01-2019 01:18:20 - [Main]: Now Date
+08-01-2019 01:18:20 - [Main]: Now Date rectified08-01-2019
+08-01-2019 01:18:20 - [Backup_mails]: File Name 1 - Apologies, from Flipkart-20141007190611
+08-01-2019 01:18:20 - [Backup_mails]: File Name 2 - Apologies, from Flipkart-20141007190611
+08-01-2019 01:18:20 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Apologies, from Flipkart-20141007190611.msg
+08-01-2019 01:18:20 - [Backup_mails]: File Name 1 - The Big Billion Day | Only a few hours left... Don't miss out.-20141006172952
+08-01-2019 01:18:20 - [Backup_mails]: File Name 2 - The Big Billion Day  Only a few hours left Don't miss out-20141006172952
+08-01-2019 01:18:20 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\The Big Billion Day  Only a few hours left Don't miss out-20141006172952.msg
+08-01-2019 01:18:21 - [Backup_mails]: File Name 1 - It's The Big Billion Day | Greatest Sale Ever Starts At 8AM Today-20141006073206
+08-01-2019 01:18:21 - [Backup_mails]: File Name 2 - It's The Big Billion Day  Greatest Sale Ever Starts At 8AM Today-20141006073206
+08-01-2019 01:18:21 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\It's The Big Billion Day  Greatest Sale Ever Starts At 8AM Today-20141006073206.msg
+08-01-2019 01:18:21 - [Backup_mails]: File Name 1 - Big Billion Day | One day away.-20141005142122
+08-01-2019 01:18:21 - [Backup_mails]: File Name 2 - Big Billion Day  One day away-20141005142122
+08-01-2019 01:18:21 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Big Billion Day  One day away-20141005142122.msg
+08-01-2019 01:18:21 - [Backup_mails]: File Name 1 - Special message from Sachin & Binny-20141004183356
+08-01-2019 01:18:21 - [Backup_mails]: File Name 2 - Special message from Sachin & Binny-20141004183356
+08-01-2019 01:18:21 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Special message from Sachin & Binny-20141004183356.msg
+08-01-2019 01:18:21 - [Backup_mails]: File Name 1 - Don't miss 8 awesome deals between 4PM - 6PM today. -20141001162207
+08-01-2019 01:18:21 - [Backup_mails]: File Name 2 - Don't miss 8 awesome deals between 4PM - 6PM today -20141001162207
+08-01-2019 01:18:21 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Don't miss 8 awesome deals between 4PM - 6PM today -20141001162207.msg
+08-01-2019 01:18:22 - [Backup_mails]: File Name 1 - Wednesday of wishes | Valid only for 1 day-20141001104051
+08-01-2019 01:18:22 - [Backup_mails]: File Name 2 - Wednesday of wishes  Valid only for 1 day-20141001104051
+08-01-2019 01:18:22 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Wednesday of wishes  Valid only for 1 day-20141001104051.msg
+08-01-2019 01:18:22 - [Backup_mails]: File Name 1 - Weekend Frenzy | Top deals of the week-20140927135907
+08-01-2019 01:18:22 - [Backup_mails]: File Name 2 - Weekend Frenzy  Top deals of the week-20140927135907
+08-01-2019 01:18:22 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Weekend Frenzy  Top deals of the week-20140927135907.msg
+08-01-2019 01:18:22 - [Backup_mails]: File Name 1 - WOW | Your weekday shopping destination-20140924114550
+08-01-2019 01:18:22 - [Backup_mails]: File Name 2 - WOW  Your weekday shopping destination-20140924114550
+08-01-2019 01:18:22 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\WOW  Your weekday shopping destination-20140924114550.msg
+08-01-2019 01:18:23 - [Backup_mails]: File Name 1 - Flipkart Exclusives | MOTO G | Asus Fonepad 7| Chetan Bhagat's next and many more-20140919182144
+08-01-2019 01:18:23 - [Backup_mails]: File Name 2 - Flipkart Exclusives  MOTO G  Asus Fonepad 7 Chetan Bhagat's next and many more-20140919182144
+08-01-2019 01:18:23 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Flipkart Exclusives  MOTO G  Asus Fonepad 7 Chetan Bhagat's next and many more-20140919182144.msg
+08-01-2019 01:18:23 - [Backup_mails]: File Name 1 - Wednesday only Wonders | Curated deals for you-20140917055951
+08-01-2019 01:18:23 - [Backup_mails]: File Name 2 - Wednesday only Wonders  Curated deals for you-20140917055951
+08-01-2019 01:18:23 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Wednesday only Wonders  Curated deals for you-20140917055951.msg
+08-01-2019 01:18:24 - [Backup_mails]: File Name 1 - Shopping isn't Fun, Without you. Avail Exclusive offers.-20140910080457
+08-01-2019 01:18:24 - [Backup_mails]: File Name 2 - Shopping isn't Fun, Without you Avail Exclusive offers-20140910080457
+08-01-2019 01:18:24 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Shopping isn't Fun, Without you Avail Exclusive offers-20140910080457.msg
+08-01-2019 01:18:24 - [Backup_mails]: File Name 1 - [IMPORTANT]: Your Vodafone E-Bill for Mobile:88XXXXXX48 (Account No:96438059) for the Month of January'2018-20180106020744
+08-01-2019 01:18:24 - [Backup_mails]: File Name 2 - (IMPORTANT) Your Vodafone E-Bill for Mobile88XXXXXX48 (Account No96438059) for the Month of January'2018-20180106020744
+08-01-2019 01:18:24 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\(IMPORTANT) Your Vodafone E-Bill for Mobile88XXXXXX48 (Account No96438059) for the Month of January'2018-20180106020744.msg
+08-01-2019 01:18:24 - [Backup_mails]: File Name 1 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:24 - [Backup_mails]: File Name 2 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:24 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Get, Set, Shop!-20150916123856.msg
+08-01-2019 01:18:24 - [Backup_mails]: File Name 1 - The best of the week is here-20150902153109
+08-01-2019 01:18:24 - [Backup_mails]: File Name 2 - The best of the week is here-20150902153109
+08-01-2019 01:18:24 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\The best of the week is here-20150902153109.msg
+08-01-2019 01:18:25 - [Backup_mails]: File Name 1 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:25 - [Backup_mails]: File Name 2 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:25 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\24 Hour Dhamaka  Deals-20150826131918.msg
+08-01-2019 01:18:25 - [Backup_mails]: File Name 1 - ||| Don't Worry, Be APPy |||-20150822153613
+08-01-2019 01:18:25 - [Backup_mails]: File Name 2 -  Don't Worry, Be APPy -20150822153613
+08-01-2019 01:18:25 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\ Don't Worry, Be APPy -20150822153613.msg
+08-01-2019 01:18:25 - [Backup_mails]: File Name 1 - 99 Store - Back on Demand-20150524144531
+08-01-2019 01:18:25 - [Backup_mails]: File Name 2 - 99 Store - Back on Demand-20150524144531
+08-01-2019 01:18:25 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\99 Store - Back on Demand-20150524144531.msg
+08-01-2019 01:18:26 - [Backup_mails]: File Name 1 - Mid Season Sale | Day 2 | Minimum 40% OFF on UCB, Lotto, Wrangler, Lee, Jack n Jones and More-20150516155656
+08-01-2019 01:18:26 - [Backup_mails]: File Name 2 - Mid Season Sale  Day 2  Minimum 40% OFF on UCB, Lotto, Wrangler, Lee, Jack n Jones and More-20150516155656
+08-01-2019 01:18:26 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Mid Season Sale  Day 2  Minimum 40% OFF on UCB, Lotto, Wrangler, Lee, Jack n Jones and More-20150516155656.msg
+08-01-2019 01:18:26 - [Backup_mails]: File Name 1 - Summer Steals | Exclusive 24 Hour Deals-20150507124458
+08-01-2019 01:18:26 - [Backup_mails]: File Name 2 - Summer Steals  Exclusive 24 Hour Deals-20150507124458
+08-01-2019 01:18:26 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Summer Steals  Exclusive 24 Hour Deals-20150507124458.msg
+08-01-2019 01:18:26 - [Backup_mails]: File Name 1 - Minimal Price. Maximum Savings | 24 Hours. 24 Deals-20150504155333
+08-01-2019 01:18:26 - [Backup_mails]: File Name 2 - Minimal Price Maximum Savings  24 Hours 24 Deals-20150504155333
+08-01-2019 01:18:26 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Minimal Price Maximum Savings  24 Hours 24 Deals-20150504155333.msg
+08-01-2019 01:18:26 - [Backup_mails]: File Name 1 - The Inspiring Gentlemen | 24 Hours.17 Deals.Hurry!-20150503082315
+08-01-2019 01:18:26 - [Backup_mails]: File Name 2 - The Inspiring Gentlemen  24 Hours17 DealsHurry!-20150503082315
+08-01-2019 01:18:26 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\The Inspiring Gentlemen  24 Hours17 DealsHurry!-20150503082315.msg
+08-01-2019 01:18:27 - [Backup_mails]: File Name 1 - #quakerelief Help Rebuild Nepal & India.-20150501202234
+08-01-2019 01:18:27 - [Backup_mails]: File Name 2 - #quakerelief Help Rebuild Nepal & India-20150501202234
+08-01-2019 01:18:27 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\#quakerelief Help Rebuild Nepal & India-20150501202234.msg
+08-01-2019 01:18:27 - [Backup_mails]: File Name 1 - Final Call for all Book Lovers. You're in for a memorable journey!-20150430060132
+08-01-2019 01:18:27 - [Backup_mails]: File Name 2 - Final Call for all Book Lovers You're in for a memorable journey!-20150430060132
+08-01-2019 01:18:27 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Final Call for all Book Lovers You're in for a memorable journey!-20150430060132.msg
+08-01-2019 01:18:27 - [Backup_mails]: File Name 1 - 16 Reasons to go WOW! -20150429090844
+08-01-2019 01:18:27 - [Backup_mails]: File Name 2 - 16 Reasons to go WOW! -20150429090844
+08-01-2019 01:18:27 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\16 Reasons to go WOW! -20150429090844.msg
+08-01-2019 01:18:27 - [Backup_mails]: File Name 1 - Last 24 Hours of High Voltage Deals on Electronics & Accessories -20150428093133
+08-01-2019 01:18:27 - [Backup_mails]: File Name 2 - Last 24 Hours of High Voltage Deals on Electronics & Accessories -20150428093133
+08-01-2019 01:18:27 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Last 24 Hours of High Voltage Deals on Electronics & Accessories -20150428093133.msg
+08-01-2019 01:18:28 - [Backup_mails]: File Name 1 - The 199 Store | Laptop Skins, Memory Card, Pendrives, Trimmers, Sandals and more-20150423152735
+08-01-2019 01:18:28 - [Backup_mails]: File Name 2 - The 199 Store  Laptop Skins, Memory Card, Pendrives, Trimmers, Sandals and more-20150423152735
+08-01-2019 01:18:28 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\The 199 Store  Laptop Skins, Memory Card, Pendrives, Trimmers, Sandals and more-20150423152735.msg
+08-01-2019 01:18:28 - [Backup_mails]: File Name 1 - WOW Offers for 24 Hours Only!-20150422110029
+08-01-2019 01:18:28 - [Backup_mails]: File Name 2 - WOW Offers for 24 Hours Only!-20150422110029
+08-01-2019 01:18:28 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\WOW Offers for 24 Hours Only!-20150422110029.msg
+08-01-2019 01:18:28 - [Backup_mails]: File Name 1 - Home Shopping Days | Last 24 Hours Only!-20150421105745
+08-01-2019 01:18:28 - [Backup_mails]: File Name 2 - Home Shopping Days  Last 24 Hours Only!-20150421105745
+08-01-2019 01:18:28 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Home Shopping Days  Last 24 Hours Only!-20150421105745.msg
+08-01-2019 01:18:29 - [Backup_mails]: File Name 1 - Flipkart Home Shopping Days are here | Min. 50% off on 1 lac+ products!-20150420114549
+08-01-2019 01:18:29 - [Backup_mails]: File Name 2 - Flipkart Home Shopping Days are here  Min 50% off on 1 lac+ products!-20150420114549
+08-01-2019 01:18:29 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Flipkart Home Shopping Days are here  Min 50% off on 1 lac+ products!-20150420114549.msg
+08-01-2019 01:18:29 - [Backup_mails]: File Name 1 - Weekend Mantra - Go wireless!-20150419091057
+08-01-2019 01:18:29 - [Backup_mails]: File Name 2 - Weekend Mantra - Go wireless!-20150419091057
+08-01-2019 01:18:29 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Weekend Mantra - Go wireless!-20150419091057.msg
+08-01-2019 01:18:29 - [Backup_mails]: File Name 1 - Flipkart Fashion Sale | UP TO 70% OFF + Extra 30% OFF-20150103134907
+08-01-2019 01:18:29 - [Backup_mails]: File Name 2 - Flipkart Fashion Sale  UP TO 70% OFF + Extra 30% OFF-20150103134907
+08-01-2019 01:18:29 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Flipkart Fashion Sale  UP TO 70% OFF + Extra 30% OFF-20150103134907.msg
+08-01-2019 01:18:29 - [Backup_mails]: File Name 1 - Thank God it is WOW Wednesday-20141203083956
+08-01-2019 01:18:29 - [Backup_mails]: File Name 2 - Thank God it is WOW Wednesday-20141203083956
+08-01-2019 01:18:29 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Thank God it is WOW Wednesday-20141203083956.msg
+08-01-2019 01:18:30 - [Backup_mails]: File Name 1 - Get 40% off on Adidas, Being Human, Lee, UCB and more-20141129134212
+08-01-2019 01:18:30 - [Backup_mails]: File Name 2 - Get 40% off on Adidas, Being Human, Lee, UCB and more-20141129134212
+08-01-2019 01:18:30 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Get 40% off on Adidas, Being Human, Lee, UCB and more-20141129134212.msg
+08-01-2019 01:18:30 - [Backup_mails]: File Name 1 - Book Clearance Sale |  Minimum 50% Off-20141121132404
+08-01-2019 01:18:30 - [Backup_mails]: File Name 2 - Book Clearance Sale Minimum 50% Off-20141121132404
+08-01-2019 01:18:30 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Book Clearance Sale Minimum 50% Off-20141121132404.msg
+08-01-2019 01:18:30 - [Backup_mails]: File Name 1 - Just GO WOW over the Best deals in town-20141119112603
+08-01-2019 01:18:30 - [Backup_mails]: File Name 2 - Just GO WOW over the Best deals in town-20141119112603
+08-01-2019 01:18:30 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Just GO WOW over the Best deals in town-20141119112603.msg
+08-01-2019 01:18:31 - [Backup_mails]: File Name 1 - This Wednesday Get Exclusive Offers Right In Your Inbox -20141112101548
+08-01-2019 01:18:31 - [Backup_mails]: File Name 2 - This Wednesday Get Exclusive Offers Right In Your Inbox -20141112101548
+08-01-2019 01:18:31 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\This Wednesday Get Exclusive Offers Right In Your Inbox -20141112101548.msg
+08-01-2019 01:18:31 - [Backup_mails]: File Name 1 - Flipkart Dhanteras Sale | Shop To Save With Golden Offers-20141020111446
+08-01-2019 01:18:31 - [Backup_mails]: File Name 2 - Flipkart Dhanteras Sale  Shop To Save With Golden Offers-20141020111446
+08-01-2019 01:18:31 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Flipkart Dhanteras Sale  Shop To Save With Golden Offers-20141020111446.msg
+08-01-2019 01:18:31 - [Backup_mails]: File Name 1 - Electronics Mela | Best Of The Festive Season Offers-20141018121435
+08-01-2019 01:18:31 - [Backup_mails]: File Name 2 - Electronics Mela  Best Of The Festive Season Offers-20141018121435
+08-01-2019 01:18:31 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Electronics Mela  Best Of The Festive Season Offers-20141018121435.msg
+08-01-2019 01:18:31 - [Backup_mails]: File Name 1 - Electronics Mela | Big Discounts on Mobiles, Tablets and Laptops.-20141017171645
+08-01-2019 01:18:31 - [Backup_mails]: File Name 2 - Electronics Mela  Big Discounts on Mobiles, Tablets and Laptops-20141017171645
+08-01-2019 01:18:31 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Electronics Mela  Big Discounts on Mobiles, Tablets and Laptops-20141017171645.msg
+08-01-2019 01:18:32 - [Backup_mails]: File Name 1 - It's a Min.50% Off Kinda Day!-20190105081120
+08-01-2019 01:18:32 - [Backup_mails]: File Name 2 - It's a Min50% Off Kinda Day!-20190105081120
+08-01-2019 01:18:32 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\It's a Min50% Off Kinda Day!-20190105081120.msg
+08-01-2019 01:18:32 - [Main]: Backup status0
+08-01-2019 01:18:32 - [Nested_Folder]: Checking for Nested Folder Under Inbox
+08-01-2019 01:18:32 - [Backup_mails]: File Name 1 - Best Deals of the Week are Here - 24 Hrs Only!-20151028110536
+08-01-2019 01:18:32 - [Backup_mails]: File Name 2 - Best Deals of the Week are Here - 24 Hrs Only!-20151028110536
+08-01-2019 01:18:32 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Best Deals of the Week are Here - 24 Hrs Only!-20151028110536.msg
+08-01-2019 01:18:32 - [Backup_mails]: File Name 1 - Thank you for making #TheBigBillionDays a Huge Success-20151025121556
+08-01-2019 01:18:32 - [Backup_mails]: File Name 2 - Thank you for making #TheBigBillionDays a Huge Success-20151025121556
+08-01-2019 01:18:32 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Thank you for making #TheBigBillionDays a Huge Success-20151025121556.msg
+08-01-2019 01:18:33 - [Backup_mails]: File Name 1 - Big Billion Specials: Don't miss these Electronics & Automotive Deals-20151016092958
+08-01-2019 01:18:33 - [Backup_mails]: File Name 2 - Big Billion Specials Don't miss these Electronics & Automotive Deals-20151016092958
+08-01-2019 01:18:33 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Big Billion Specials Don't miss these Electronics & Automotive Deals-20151016092958.msg
+08-01-2019 01:18:33 - [Backup_mails]: File Name 1 - Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516
+08-01-2019 01:18:33 - [Backup_mails]: File Name 2 - Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516
+08-01-2019 01:18:33 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516.msg
+08-01-2019 01:18:33 - [Backup_mails]: File Name 1 - The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040
+08-01-2019 01:18:33 - [Backup_mails]: File Name 2 - The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040
+08-01-2019 01:18:33 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040.msg
+08-01-2019 01:18:34 - [Backup_mails]: File Name 1 - Your 5-day Shopping Guide for The Big Billion Days-20151012110142
+08-01-2019 01:18:34 - [Backup_mails]: File Name 2 - Your 5-day Shopping Guide for The Big Billion Days-20151012110142
+08-01-2019 01:18:34 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Your 5-day Shopping Guide for The Big Billion Days-20151012110142.msg
+08-01-2019 01:18:34 - [Backup_mails]: File Name 1 - The Big Billion Days are Here - October 13th-17th -20151010113945
+08-01-2019 01:18:34 - [Backup_mails]: File Name 2 - The Big Billion Days are Here - October 13th-17th -20151010113945
+08-01-2019 01:18:34 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\The Big Billion Days are Here - October 13th-17th -20151010113945.msg
+08-01-2019 01:18:34 - [Backup_mails]: File Name 1 - The best thing to happen to you this Wednesday!-20151007145230
+08-01-2019 01:18:34 - [Backup_mails]: File Name 2 - The best thing to happen to you this Wednesday!-20151007145230
+08-01-2019 01:18:34 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\The best thing to happen to you this Wednesday!-20151007145230.msg
+08-01-2019 01:18:35 - [Backup_mails]: File Name 1 - Only for 24 hours | Massive discounts-20150923174257
+08-01-2019 01:18:35 - [Backup_mails]: File Name 2 - Only for 24 hours  Massive discounts-20150923174257
+08-01-2019 01:18:35 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Only for 24 hours  Massive discounts-20150923174257.msg
+08-01-2019 01:18:35 - [Backup_mails]: File Name 1 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:35 - [Backup_mails]: File Name 2 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:35 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\Get, Set, Shop!-20150916123856.msg
+08-01-2019 01:18:35 - [Backup_mails]: File Name 1 - The best of the week is here-20150902153109
+08-01-2019 01:18:35 - [Backup_mails]: File Name 2 - The best of the week is here-20150902153109
+08-01-2019 01:18:35 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\The best of the week is here-20150902153109.msg
+08-01-2019 01:18:36 - [Backup_mails]: File Name 1 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:36 - [Backup_mails]: File Name 2 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:36 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\24 Hour Dhamaka  Deals-20150826131918.msg
+08-01-2019 01:18:36 - [Backup_mails]: File Name 1 - ||| Don't Worry, Be APPy |||-20150822153613
+08-01-2019 01:18:36 - [Backup_mails]: File Name 2 -  Don't Worry, Be APPy -20150822153613
+08-01-2019 01:18:36 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\Filp Folder\ Don't Worry, Be APPy -20150822153613.msg
+08-01-2019 01:18:36 - [Backup_mails]: File Name 1 - Best Deals of the Week are Here - 24 Hrs Only!-20151028110536
+08-01-2019 01:18:36 - [Backup_mails]: File Name 2 - Best Deals of the Week are Here - 24 Hrs Only!-20151028110536
+08-01-2019 01:18:36 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Best Deals of the Week are Here - 24 Hrs Only!-20151028110536.msg
+08-01-2019 01:18:37 - [Backup_mails]: File Name 1 - Thank you for making #TheBigBillionDays a Huge Success-20151025121556
+08-01-2019 01:18:37 - [Backup_mails]: File Name 2 - Thank you for making #TheBigBillionDays a Huge Success-20151025121556
+08-01-2019 01:18:37 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Thank you for making #TheBigBillionDays a Huge Success-20151025121556.msg
+08-01-2019 01:18:37 - [Backup_mails]: File Name 1 - Big Billion Specials: Don't miss these Electronics & Automotive Deals-20151016092958
+08-01-2019 01:18:37 - [Backup_mails]: File Name 2 - Big Billion Specials Don't miss these Electronics & Automotive Deals-20151016092958
+08-01-2019 01:18:37 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Big Billion Specials Don't miss these Electronics & Automotive Deals-20151016092958.msg
+08-01-2019 01:18:37 - [Backup_mails]: File Name 1 - Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516
+08-01-2019 01:18:37 - [Backup_mails]: File Name 2 - Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516
+08-01-2019 01:18:37 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Save Big on Mobiles & Accessories - Big Billion Specials-20151015101516.msg
+08-01-2019 01:18:37 - [Backup_mails]: File Name 1 - The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040
+08-01-2019 01:18:37 - [Backup_mails]: File Name 2 - The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040
+08-01-2019 01:18:38 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\The Big Billion Days - Fashion and Lifestyle 50-80% Off-20151013101040.msg
+08-01-2019 01:18:38 - [Backup_mails]: File Name 1 - Your 5-day Shopping Guide for The Big Billion Days-20151012110142
+08-01-2019 01:18:38 - [Backup_mails]: File Name 2 - Your 5-day Shopping Guide for The Big Billion Days-20151012110142
+08-01-2019 01:18:38 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Your 5-day Shopping Guide for The Big Billion Days-20151012110142.msg
+08-01-2019 01:18:38 - [Backup_mails]: File Name 1 - The Big Billion Days are Here - October 13th-17th -20151010113945
+08-01-2019 01:18:38 - [Backup_mails]: File Name 2 - The Big Billion Days are Here - October 13th-17th -20151010113945
+08-01-2019 01:18:38 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\The Big Billion Days are Here - October 13th-17th -20151010113945.msg
+08-01-2019 01:18:38 - [Backup_mails]: File Name 1 - The best thing to happen to you this Wednesday!-20151007145230
+08-01-2019 01:18:38 - [Backup_mails]: File Name 2 - The best thing to happen to you this Wednesday!-20151007145230
+08-01-2019 01:18:38 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\The best thing to happen to you this Wednesday!-20151007145230.msg
+08-01-2019 01:18:39 - [Backup_mails]: File Name 1 - Only for 24 hours | Massive discounts-20150923174257
+08-01-2019 01:18:39 - [Backup_mails]: File Name 2 - Only for 24 hours  Massive discounts-20150923174257
+08-01-2019 01:18:39 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Only for 24 hours  Massive discounts-20150923174257.msg
+08-01-2019 01:18:39 - [Backup_mails]: File Name 1 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:39 - [Backup_mails]: File Name 2 - Get, Set, Shop!-20150916123856
+08-01-2019 01:18:39 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\Get, Set, Shop!-20150916123856.msg
+08-01-2019 01:18:39 - [Backup_mails]: File Name 1 - The best of the week is here-20150902153109
+08-01-2019 01:18:39 - [Backup_mails]: File Name 2 - The best of the week is here-20150902153109
+08-01-2019 01:18:39 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\The best of the week is here-20150902153109.msg
+08-01-2019 01:18:40 - [Backup_mails]: File Name 1 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:40 - [Backup_mails]: File Name 2 - 24 Hour Dhamaka  Deals-20150826131918
+08-01-2019 01:18:40 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\24 Hour Dhamaka  Deals-20150826131918.msg
+08-01-2019 01:18:40 - [Backup_mails]: File Name 1 - ||| Don't Worry, Be APPy |||-20150822153613
+08-01-2019 01:18:40 - [Backup_mails]: File Name 2 -  Don't Worry, Be APPy -20150822153613
+08-01-2019 01:18:40 - [Backup_mails]: Mail will be saved as C:\FreeLance\08-01-2019\Inbox\JFF\ Don't Worry, Be APPy -20150822153613.msg
+08-01-2019 01:18:40 - [Nested_Folder]: Status for Nested Folder 0
+08-01-2019 01:18:45 - [Releasing_Objects]: Releasing Created objects
+08-01-2019 01:18:50 - [Service_Wait]: Start

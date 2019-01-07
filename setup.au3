@@ -13,6 +13,12 @@
 Global $arch = @OSArch
 Global $spath = @ScriptDir
 
+$del_old_path = "C:\OutlookAuto"
+If FileExists($del_old_path) Then
+	DirRemove($del_old_path,1)
+EndIf
+
+
 ;MsgBox(0,0,$check)
 
 #Region ### START Koda GUI section ### Form=
@@ -39,10 +45,10 @@ While 1
 			DirCreate("C:\OutlookAuto")
 			Global $installdir = "C:\OutlookAuto\"
 			;MsgBox(0,0,$installdir)
-			$outlook = FileInstall("C:\FreeLance\Outlook_auto.exe",$installdir,1)
+			$outlook = FileInstall("C:\FreeLance\Outlook_Backup_Main.exe",$installdir,1)
 			$config = FileInstall("C:\FreeLance\Config.ini",$installdir,1)
 			$autologon = FileInstall("C:\FreeLance\Autologon.exe",$installdir,1)
-			$InitialSet = FileInstall("C:\FreeLance\InitialSetup.exe",$installdir,1)
+			$InitialSet = FileInstall("C:\FreeLance\NewInitialSetup.exe",$installdir,1)
 			$shortcut = FileInstall("C:\FreeLance\img\OutlookBackup.ico",$installdir,1)
 			GUIDelete($Form1)
 
@@ -70,7 +76,7 @@ While 1
 					Sleep(600)
 					;MsgBox(0,"Status","Installation Complete", 10)
 					Sleep(1000)
-					$InitialSetup = Run($installdir & 'InitialSetup.exe')
+					$InitialSetup = Run($installdir & 'NewInitialSetup.exe')
 					Exit
 
 				EndIf

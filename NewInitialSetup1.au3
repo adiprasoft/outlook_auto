@@ -17,30 +17,64 @@
 
 Global $spath = @ScriptDir
 Global $DOS, $Message, $dst, $bkpTime,  $logEnable = ""
-
+$sKeyPath = "HKEY_CURRENT_USER\SOFTWARE\MICROSOFT\Windows NT\CurrentVersion\Windows Messaging Subsystem\Profiles\Outlook"
 $cfgFile = @ScriptDir & "\Config.ini"
-$logfile = @ScriptDir & "\Log.txt"
 
-If FileExists($logFile) Then
-	FileDelete($logFile)
+$logfile = @ScriptDir &"\log.txt"
+If FileExists($logfile) Then
+	FileDelete($logfile)
+	SendAndLog("[Initial_Setup]: Deleted Old Log File")
 EndIf
 
 
+Func SendAndLog($Data, $FileName = -1, $TimeStamp = True, $Log = $logEnable)
+   If StringCompare($Log, 'True') ==0 Then
+	   If $FileName == -1 Then $FileName = @ScriptDir & '\Log.txt'
+	   ;Send($Data)
+	   $hFile = FileOpen($FileName, 1)
+	   If $hFile <> -1 Then
+		   If $TimeStamp = True Then $Data = _Now() & ' - ' & $Data
+		   FileWriteLine($hFile, $Data)
+		   FileClose($hFile)
+		EndIf
+   EndIf
+EndFunc
+
+
+
+
+SendAndLog("[Initial_Setup]: Starting Outlook Initialization")
 
 If FileExists($cfgFile) Then
 	FileDelete($cfgFile)
+	SendAndLog("[Initial_Setup]: Deleted Old Config file")
 EndIf
 
 
+
 FileChangeDir($spath)
+
 Global $installdir = "C:\OutlookAuto\"
 $Desktop = @DesktopDir
+
+#CS
+If FileExists(@scriptdir & "\Config.ini") Then
+	  Global $logEnable =  IniRead($cfgFile, "Section", "LogEnable", "False")
+EndIf
+
+$dread = IniRead($cfgFile,'Section','DestinationFolder','D:\Outlook_Backup')
+$timeread = IniRead($cfgFile,'Section','BackupTime','20:00:00')
+#CE
+
+
 
 
 
 Func task_schedule_delete()
+   SendAndLog("[task_schedule_delete]: Deleting task OutlookAuto")
    $DOS = Run(@ComSpec & ' /c schtasks /delete /tn OutlookAuto /f', "", @SW_HIDE, $STDERR_CHILD + $STDOUT_CHILD)
    ProcessWaitClose($DOS)
+   SendAndLog("[task_schedule_delete]: reseting config")
 EndFunc
 
 
@@ -212,9 +246,9 @@ While 1
 				EndIf
 
 
-				$createShortcut = FileCreateShortcut($installdir & "NewInitialSetup.exe",@DesktopDir & "\OutlookAuto.lnk","","","OutlookAuto",$installdir & "OutlookBackup.ico")
+				$createShortcut = FileCreateShortcut($installdir & "InitialSetup.exe",@DesktopDir & "\OutlookAuto.lnk","","","OutlookAuto",$installdir & "OutlookBackup.ico")
 				FileChangeDir($spath)
-				$Enginestart = Run('Outlook_Backup_Main.exe')
+				;$Enginestart = Run('Outlook_Backup_Main.exe')
 				ExitLoop
 			EndIf
 
